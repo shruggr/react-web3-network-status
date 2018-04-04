@@ -46,7 +46,7 @@
   },
   "peerDependencies": {
     "react": "^15.6.1",
-    "web3": "^1.x.x"
+    "web3": "^1.0.0-beta.33"
   },
   "devDependencies": {
     "babel-eslint": "^8",
