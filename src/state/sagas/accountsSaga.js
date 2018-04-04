@@ -8,7 +8,7 @@ const pollInterval = 2000
 const getAccounts = function * () {
   const web3 = yield select(state => state.web3)
   try {
-    const payload = yield call(() => web3.eth.getAccountsAsync())
+    const payload = yield call(() => web3.eth.getAccounts())
     yield put({type: types.GET_ACCOUNTS_SUCCESS, payload})
   } catch (e) {
     yield put({type: types.GET_ACCOUNTS_FAILURE, payload: e})

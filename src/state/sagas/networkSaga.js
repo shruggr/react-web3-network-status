@@ -8,7 +8,7 @@ const pollInterval = 2000
 const getNetworkId = function * () {
   const web3 = yield select(state => state.web3)
   try {
-    const payload = yield call(() => web3.version.getNetworkAsync())
+    const payload = yield call(() => web3.version.getNetwork())
     yield put({type: types.GET_NETWORK_ID_SUCCESS, payload})
   } catch (e) {
     yield put({type: types.GET_NETWORK_ID_FAILURE, payload: e})
@@ -18,7 +18,7 @@ const getNetworkId = function * () {
 const getNetworkListening = function * () {
   const web3 = yield select(state => state.web3)
   try {
-    const payload = yield call(() => web3.net.getListeningAsync())
+    const payload = yield call(() => web3.eth.net.isListening())
     yield put({type: types.GET_NETWORK_LISTENING_SUCCESS, payload})
   } catch (e) {
     yield put({type: types.GET_NETWORK_LISTENING_FAILURE, payload: e})
@@ -28,7 +28,7 @@ const getNetworkListening = function * () {
 const getNetworkPeerCount = function * () {
   const web3 = yield select(state => state.web3)
   try {
-    const payload = yield call(() => web3.net.getPeerCountAsync())
+    const payload = yield call(() => web3.eth.net.getPeerCount())
     yield put({type: types.GET_NETWORK_PEER_COUNT_SUCCESS, payload})
   } catch (e) {
     yield put({type: types.GET_NETWORK_PEER_COUNT_FAILURE, payload: e})

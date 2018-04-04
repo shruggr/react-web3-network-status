@@ -39,7 +39,6 @@
   },
   "homepage": "https://github.com/rongierlach/react-web3-network-status#readme",
   "dependencies": {
-    "bluebird": "^3.5.0",
     "prop-types": "^15.5.10",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
@@ -47,7 +46,7 @@
   },
   "peerDependencies": {
     "react": "^15.6.1",
-    "web3": "^0.x.x"
+    "web3": "^1.x.x"
   },
   "devDependencies": {
     "babel-eslint": "^8",
